@@ -175,14 +175,10 @@ int main(int argc, char* argv[]){
     double backResult[VEC_SIZE] = {0,0,0};
     cout << "Kadai1" << endl;
     forwardSubstitution(fMat, fVec, forwardResult);
-    cout << forwardResult[0] << endl;
-    cout << forwardResult[1] << endl;
-    cout << forwardResult[2] << endl;
+    printVector(forwardResult);
     cout << "Kadai2" << endl;
     backSubstitution(bMat, bVec, backResult);
-    cout << backResult[0] << endl;
-    cout << backResult[1] << endl;
-    cout << backResult[2] << endl;
+    printVector(backResult);
     cout << endl;
     //-------------------------------------------------
     //課題4
@@ -199,12 +195,10 @@ int main(int argc, char* argv[]){
     
     LUdecomposition(a,l,u);
     
-    for(int h = 0; h < MATRIX_SIZE; h++){
-        for(int w = 0; w < MATRIX_SIZE; w++){
-            cout << l[h][w] << "  ";
-        }
-        cout << endl;
-    }
+    cout << "L;" << endl;
+    printMatrix(l);
+    cout << "U;" << endl;
+    printMatrix(u);
     cout << endl;
     //-------------------------------------------------
     //課題５ 済み
